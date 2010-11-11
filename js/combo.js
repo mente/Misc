@@ -9,7 +9,7 @@
     @requires prototype1.6.1
  */
 var Combo = Class.create({
-    initialize: function(finishedHandler, operationsCount == 0){
+    initialize: function(finishedHandler, operationsCount){
 		this.finishedHandler = null;
 		this.length = 0;
 		this.isDynamic = false;
