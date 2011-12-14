@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Execute configured cleanup and repair operations on parsed markup</title>
+ </head>
+ <body><div class="manualnavbar" style="text-align: center;">
+ <div class="prev" style="text-align: left; float: left;"><a href="function.tidy-access-count.html">tidy_access_count</a></div>
+ <div class="next" style="text-align: right; float: right;"><a href="function.tidy-config-count.html">tidy_config_count</a></div>
+ <div class="up"><a href="ref.tidy.html">Tidy Functions</a></div>
+ <div class="home"><a href="index.html">PHP Manual</a></div>
+</div><hr /><div id="function.tidy-clean-repair" class="refentry">
+ <div class="refnamediv">
+  <h1 class="refname">tidy_clean_repair</h1>
+  <p class="verinfo">(PHP 5, PECL tidy &gt;= 0.5.2)</p><p class="refpurpose"><span class="refname">tidy_clean_repair</span> &mdash; <span class="dc-title">Execute configured cleanup and repair operations on parsed markup</span></p>
+
+ </div>
+ <a name="function.tidy-clean-repair.unknown"></a><div class="refsect1 unknown">
+  <h3 class="title">Description</h3>
+  <p class="para">Procedural style:</p>
+  <div class="methodsynopsis dc-description">
+   <span class="type">bool</span> <span class="methodname"><b>tidy_clean_repair</b></span>
+    ( <span class="methodparam"><span class="type"><span class="type tidy">tidy</span></span> <tt class="parameter">$object</tt></span>
+   )</div>
+
+  <p class="para rdfs-comment">Object oriented style:</p>
+  <div class="methodsynopsis dc-description">
+   <span class="type">bool</span> <span class="methodname"><b>tidy->cleanRepair</b></span>
+    ( <span class="methodparam">void</span>
+   )</div>
+
+  <p class="para rdfs-comment">
+   This function cleans and repairs the given tidy
+   <i><tt class="parameter">object</tt></i>
+.
+  </p>
+  <p class="para">
+   </p><div class="example">
+    <p><b>Example #1 <b>tidy_clean_repair()</b> example</b></p>
+    <div class="example-contents programlisting">
+<div class="phpcode"><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php<br />$html&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'&lt;p&gt;test&lt;/I&gt;'</span><span style="color: #007700">;<br /><br /></span><span style="color: #0000BB">$tidy&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">tidy_parse_string</span><span style="color: #007700">(</span><span style="color: #0000BB">$html</span><span style="color: #007700">);<br /></span><span style="color: #0000BB">tidy_clean_repair</span><span style="color: #007700">(</span><span style="color: #0000BB">$tidy</span><span style="color: #007700">);<br /><br />echo&nbsp;</span><span style="color: #0000BB">$tidy</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">?&gt;</span>
+</span>
+</code></div>
+    </div>
+
+    <div class="example-contents para"><p>The above example will output:</p></div>
+    <div class="example-contents screen">
+<div class="cdata"><pre>
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 3.2//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;test&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+    </div>
+   </div><p>
+  </p>
+  <p class="para">
+   See also <a href="function.tidy-repair-file.html" class="function">tidy_repair_file()</a> and
+   <a href="function.tidy-repair-string.html" class="function">tidy_repair_string()</a>.
+  </p>
+ </div>
+
+</div><hr /><div class="manualnavbar" style="text-align: center;">
+ <div class="prev" style="text-align: left; float: left;"><a href="function.tidy-access-count.html">tidy_access_count</a></div>
+ <div class="next" style="text-align: right; float: right;"><a href="function.tidy-config-count.html">tidy_config_count</a></div>
+ <div class="up"><a href="ref.tidy.html">Tidy Functions</a></div>
+ <div class="home"><a href="index.html">PHP Manual</a></div>
+</div></body></html>

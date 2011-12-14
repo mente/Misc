@@ -1,0 +1,4 @@
+#!/bin/sh
+FUNCTION=`echo $1 | sed 's/_/-/g'`
+lynx $HOME/.vim/manuals/php/function.$FUNCTION.html
+

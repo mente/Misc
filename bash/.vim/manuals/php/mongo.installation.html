@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Installation</title>
+ </head>
+ <body><div class="manualnavbar" style="text-align: center;">
+ <div class="prev" style="text-align: left; float: left;"><a href="mongo.requirements.html">Requirements</a></div>
+ <div class="next" style="text-align: right; float: right;"><a href="mongo.configuration.html">Runtime Configuration</a></div>
+ <div class="up"><a href="mongo.setup.html">Installing/Configuring</a></div>
+ <div class="home"><a href="index.html">PHP Manual</a></div>
+</div><hr /><div id="mongo.installation" class="section">
+ <h2 class="title">Installation</h2>
+ 
+ <p class="para">
+  To get the source:
+  <div class="example-contents screen"><br />
+   $ cvs -d :pserver:cvsread@cvs.php.net:/repository checkout pecl/mongo<br />
+   # password: phpfi<br />
+  </div>
+ </p>
+
+ <p class="para">
+  To build, use:
+  <div class="example-contents screen"><br />
+   $ cd pecl/mongo<br />
+   $ ./configure --enable-mongo<br />
+   $ make<br />
+  </div>
+  </p><table class="doctable table">
+   <caption><b>Options used by configure</b></caption>
+   
+    <thead valign="middle">
+     <tr valign="middle">
+      <th>Option</th>
+      <th>Default</th>
+      <th>Description</th>
+     </tr>
+
+    </thead>
+
+    <tbody valign="middle" class="tbody">
+      <tr valign="middle">
+       <td align="left">--with-mongodb=/path/to/mongodb</td>
+       <td align="left">/usr/local</td>
+       <td align="left">Path to local mongodb install</td>
+      </tr>
+
+      <tr valign="middle">
+       <td align="left">--with-boost=/path/to/boost/libs</td>
+       <td align="left">/usr/lib/</td>
+       <td align="left">Path to boost libraries</td>
+      </tr>
+
+      <tr valign="middle">
+       <td align="left">--enable-64</td>
+       <td align="left">no</td>
+       <td align="left">Compile for 64-bit architecture</td>
+     </tr>
+
+    </tbody>
+   
+  </table>
+<p>
+ </p>
+
+ <p class="para">
+  Note for Mac OS X users: Web Sharing uses 64-bit PHP, however, the command line PHP uses 32-bit.  
+  Therefore, you have to use --enable-64 to force command-line PHP to build an Apache-compliant 
+  PHP extension.
+ </p>
+
+ <p class="para">
+  To install:
+  <div class="example-contents screen"><br />
+   $ sudo cp modules/mongo.so /path/to/extension_dir<br />
+   $ sudo cp src/php/* /path/to/php/includes/mongo/<br />
+  </div>
+ </p>
+
+ <p class="para">
+  php.ini settings:
+  To load this extension on startup, add a line:
+  <div class="example-contents screen"><br />
+   extension=mongo.so<br />
+  </div>
+
+  You should also add some default settings:
+  <div class="example-contents screen"><br />
+   [mongo]<br />
+   ; Default host for mongo connection<br />
+   mongo.default_host = localhost<br />
+   <br />
+   ; Default port for mongo database<br />
+   mongo.default_port = 27017<br />
+   <br />
+   ; If the driver should reconnect to mongo<br />
+   mongo.auto_reconnect = true<br />
+  </div>
+ </p>
+</div><hr /><div class="manualnavbar" style="text-align: center;">
+ <div class="prev" style="text-align: left; float: left;"><a href="mongo.requirements.html">Requirements</a></div>
+ <div class="next" style="text-align: right; float: right;"><a href="mongo.configuration.html">Runtime Configuration</a></div>
+ <div class="up"><a href="mongo.setup.html">Installing/Configuring</a></div>
+ <div class="home"><a href="index.html">PHP Manual</a></div>
+</div></body></html>

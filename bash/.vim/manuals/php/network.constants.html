@@ -1,0 +1,293 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Predefined Constants</title>
+ </head>
+ <body><div class="manualnavbar" style="text-align: center;">
+ <div class="prev" style="text-align: left; float: left;"><a href="network.resources.html">Resource Types</a></div>
+ <div class="next" style="text-align: right; float: right;"><a href="ref.network.html">Network Functions</a></div>
+ <div class="up"><a href="book.network.html">Network</a></div>
+ <div class="home"><a href="index.html">PHP Manual</a></div>
+</div><hr /><div>
+ <h1>Predefined Constants</h1>
+
+ <p class="simpara">
+The constants below are always available as part of the PHP core.
+</p>
+  <table class="doctable table">
+   <caption><b><a href="function.openlog.html" class="function">openlog()</a> Options</b></caption>
+   
+    <thead valign="middle">
+     <tr valign="middle">
+      <th>Constant</th>
+      <th>Description</th>
+     </tr>
+
+    </thead>
+
+    <tbody valign="middle" class="tbody">
+     <tr valign="middle">
+      <td align="left">LOG_CONS</td>
+      <td align="left">
+       if there is an error while sending data to the system logger,
+       write directly to the system console
+      </td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">LOG_NDELAY</td>
+      <td align="left">
+       open the connection to the logger immediately 
+      </td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">LOG_ODELAY</td>
+      <td align="left">
+       (default) delay opening the connection until the first
+       message is logged
+      </td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">LOG_NOWAIT</td>
+      <td align="left">
+      </td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">LOG_PERROR</td>
+      <td align="left">print log message also to standard error</td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">LOG_PID</td>
+      <td align="left">include PID with each message</td>
+     </tr>
+
+    </tbody>
+   
+  </table>
+
+
+  <table class="doctable table">
+   <caption><b><a href="function.openlog.html" class="function">openlog()</a> Facilities</b></caption>
+   
+    <thead valign="middle">
+     <tr valign="middle">
+      <th>Constant</th>
+      <th>Description</th>
+     </tr>
+
+    </thead>
+
+    <tbody valign="middle" class="tbody">
+     <tr valign="middle">
+      <td align="left">LOG_AUTH</td>
+      <td align="left">
+       security/authorization messages (use LOG_AUTHPRIV instead
+       in systems where that constant is defined)
+      </td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">LOG_AUTHPRIV</td>
+      <td align="left">security/authorization messages (private)</td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">LOG_CRON</td>
+      <td align="left">clock daemon (cron and at)</td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">LOG_DAEMON</td>
+      <td align="left">other system daemons</td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">LOG_KERN</td>
+      <td align="left">kernel messages</td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">LOG_LOCAL0 ... LOG_LOCAL7</td>
+      <td align="left">reserved for local use, these are not available in Windows</td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">LOG_LPR</td>
+      <td align="left">line printer subsystem</td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">LOG_MAIL</td>
+      <td align="left">mail subsystem</td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">LOG_NEWS</td>
+      <td align="left">USENET news subsystem</td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">LOG_SYSLOG</td>
+      <td align="left">messages generated internally by syslogd</td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">LOG_USER</td>
+      <td align="left">generic user-level messages</td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">LOG_UUCP</td>
+      <td align="left">UUCP subsystem</td>
+     </tr>
+
+    </tbody>
+   
+  </table>
+
+
+  <table class="doctable table">
+   <caption><b><a href="function.syslog.html" class="function">syslog()</a> Priorities (in descending order)</b></caption>
+   
+    <thead valign="middle">
+     <tr valign="middle">
+      <th>Constant</th>
+      <th>Description</th>
+     </tr>
+
+    </thead>
+
+    <tbody valign="middle" class="tbody">
+     <tr valign="middle">
+      <td align="left">LOG_EMERG</td>
+      <td align="left">system is unusable</td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">LOG_ALERT</td>
+      <td align="left">action must be taken immediately</td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">LOG_CRIT</td>
+      <td align="left">critical conditions</td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">LOG_ERR</td>
+      <td align="left">error conditions</td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">LOG_WARNING</td>
+      <td align="left">warning conditions</td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">LOG_NOTICE</td>
+      <td align="left">normal, but significant, condition</td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">LOG_INFO</td>
+      <td align="left">informational message</td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">LOG_DEBUG</td>
+      <td align="left">debug-level message</td>
+     </tr>
+
+    </tbody>
+   
+  </table>
+
+  <table class="doctable table">
+   <caption><b><a href="function.dns-get-record.html" class="function">dns_get_record()</a> Options</b></caption>
+   
+    <thead valign="middle">
+     <tr valign="middle">
+      <th>Constant</th>
+      <th>Description</th>
+     </tr>
+
+    </thead>
+
+    <tbody valign="middle" class="tbody">
+     <tr valign="middle">
+      <td align="left">DNS_A</td>
+      <td align="left">IPv4 Address Resource</td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">DNS_MX</td>
+      <td align="left">Mail Exchanger Resource</td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">DNS_CNAME</td>
+      <td align="left">Alias (Canonical Name) Resource</td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">DNS_NS</td>
+      <td align="left">Authoritative Name Server Resource</td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">DNS_PTR</td>
+      <td align="left">Pointer Resource</td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">DNS_HINFO</td>
+      <td align="left">Host Info Resource (See IANA&#039;s
+        <a href="http://www.iana.org/assignments/operating-system-names" class="link external">&raquo; Operating System Names</a>
+        for the meaning of these values)</td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">DNS_SOA</td>
+      <td align="left">Start of Authority Resource</td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">DNS_TXT</td>
+      <td align="left">Text Resource</td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">DNS_ANY</td>
+      <td align="left">Any Resource Record.  On most systems
+        this returns all resource records, however
+        it should not be counted upon for critical
+        uses.  Try DNS_ALL instead.</td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">DNS_AAAA</td>
+      <td align="left">IPv6 Address Resource</td>
+     </tr>
+
+     <tr valign="middle">
+      <td align="left">DNS_ALL</td>
+      <td align="left">Iteratively query the name server for
+        each available record type.</td>
+     </tr>
+
+    </tbody>
+   
+  </table>
+
+</div>
+<hr /><div class="manualnavbar" style="text-align: center;">
+ <div class="prev" style="text-align: left; float: left;"><a href="network.resources.html">Resource Types</a></div>
+ <div class="next" style="text-align: right; float: right;"><a href="ref.network.html">Network Functions</a></div>
+ <div class="up"><a href="book.network.html">Network</a></div>
+ <div class="home"><a href="index.html">PHP Manual</a></div>
+</div></body></html>
