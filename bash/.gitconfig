@@ -1,0 +1,13 @@
+[user]
+	name = Alex Vasilenko
+	email = aa.vasilenko@gmail.com
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	ss = status -s
+	svn-log = svn log --show-commit
+    cdiff = diff --color
+[core]
+	excludesfile = /Users/mente/.gitignore
+	quotepath = false
+    editor=/usr/bin/vim
+	autocrlf = input

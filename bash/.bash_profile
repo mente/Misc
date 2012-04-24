@@ -28,3 +28,4 @@ if [ -f /opt/local/etc/profile.d/autojump.sh ]; then
     . /opt/local/etc/profile.d/autojump.sh
 fi
 alias psg="ps aux | egrep -i --color"
+export M2_HOME="/usr/share/maven"
