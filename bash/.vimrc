@@ -250,8 +250,3 @@ endif
 nnoremap <leader>v V`]
 nnoremap <leader><Space> <Plug>NerdCommenterToggle
 let g:syntastic_enable_signs=1
-
-"Fuck drupal
-au BufNewFile,BufRead *.module setfiletype php
-au BufNewFile,BufRead *.install  setfiletype php
-au BufNewFile,BufRead *.inc  setfiletype php
