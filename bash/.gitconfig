@@ -6,8 +6,16 @@
 	ss = status -s
 	svn-log = svn log --show-commit
     cdiff = diff --color
-	permission-reset = "!git diff -p | grep -E \"^(diff|old mode|new mode)\" | sed -e \"s/^old/NEW/;s/^new/old/;s/^NEW/new/\" | git apply"
 [core]
 	excludesfile = /Users/mente/.gitignore
 	quotepath = false
     editor=/usr/bin/vim
+	autocrlf = input
+	pager = less -r
+[color]
+	ui = true
+    diff = auto
+    branch = auto
+    status = auto
+    interactive = auto
+    grep = auto
