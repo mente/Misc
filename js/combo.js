@@ -1,6 +1,6 @@
 /**
  Class used for calling function, only when several async requests are finished. Usage:
- va exampleCombo = new CyclicBarrier(finalFunction, 3)
+ var exampleCombo = new CyclicBarrier(finalFunction, 3)
  exampleCombo.wrap(asyncFunction)
  exampleCombo.wrap(asyncFunction)
  exampleCombo.wrap(asyncFunction)
@@ -9,34 +9,46 @@
  You can use it as a single context for this CyclicBarrier
 
  When all asyncFunctions are finished finalFunction will be called
- */
-var CyclicBarrier = function(finishedHandler, length) {
-	this.finishedHandler = finishedHandler || Onyx.emptyFunction;
-	this.length = length;
-	this.context = {};
-	this.finishedOne = function() {
-		this.length--;
-	};
-	this.setHandler = function(handler) {
-		this.finishedHandler = handler
-	};
-	this.wrap = function(callback){
+*/
+'use strict';
+(function (factory) {
+	// Support three module loading scenarios
+	if (typeof define === 'function' && define['amd']) {
+		// [2] AMD anonymous module
+		define(['jquery'], factory);
+	} else {
+		// [3] No module loader (plain <script> tag) - put directly in global namespace
+		window.CyclicBarrier = factory(window.jQuery);
+	}
+})(function($) {
+	var CyclicBarrier = function(finishedHandler, length) {
 		var self = this;
-		var _callback = (callback || Onyx.emptyFunction);
-		return function(){
-			self.finishedOne()
-			arguments[ arguments.length++ ] = self.context;
-			_callback.apply(null, arguments);
-			if (self.isFinished()) {
-				self.finishedHandler(self.context)
+		this.finishedHandler = finishedHandler || $.noop;
+		this.length = length;
+		this.context = {};
+		this.finishedOne = function() {
+			self.length--;
+		};
+		this.setHandler = function(handler) {
+			self.finishedHandler = handler
+		};
+		this.wrap = function(callback){
+			var _callback = (callback || $.noop);
+			return function(){
+				self.finishedOne()
+				arguments[ arguments.length++ ] = self.context;
+				_callback.apply(null, arguments);
+				if (self.isFinished()) {
+					self.finishedHandler(self.context)
+				}
 			}
-		}
-	};
-	this.isFinished = function() {
-		return this.length == 0;
+		};
+		this.isFinished = function() {
+			return this.length == 0;
+		};
+
+		return this;
 	};
 
-	return this;
-};
-var Onyx = function() {};
-Onyx.prototype.emptyFunction = function(){};
+	return CyclicBarrier;
+})
